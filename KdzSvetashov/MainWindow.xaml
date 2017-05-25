@@ -46,12 +46,12 @@
             <Button x:Name="Truck" Content="Грузовики" HorizontalAlignment="Left" VerticalAlignment="Top" Width="109" Margin="10,82.4,0,0" Grid.Row="3" Click="Truck_Click"/>
             <Button x:Name="Change" Content="Изменить" Height="50" VerticalAlignment="Top" Grid.Column="2" Margin="439.4,9.888,-491,0" Grid.Row="4" Click="Change_Click"/>
         </Grid>
-        <Grid Name="front" Visibility="Collapsed">
+        <Grid Name="front" Visibility="Visible">
             <Button x:Name="Admin_Button" Content="Админ" HorizontalAlignment="Center" VerticalAlignment="Center" Width="150" Height="50" Margin="45,10.4,44.2,36.4" Grid.Row="4" Click="Admin_Button_Click"/>
 
         </Grid>
 
-        <Grid Name="Admin_lorry" Visibility="Visible">
+        <Grid Name="Admin_lorry" Visibility="Collapsed">
             <Grid.RowDefinitions>
                 <RowDefinition Height="129*"/>
                 <RowDefinition Height="116*"/>
