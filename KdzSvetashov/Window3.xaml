@@ -1,0 +1,23 @@
+﻿<Window x:Class="KdzSvetashov.Window3"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KdzSvetashov"
+        mc:Ignorable="d"
+        Title="Window3" Height="227.82" Width="269.549">
+    <Grid>
+        <Label x:Name="Name" Content="Название" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Prod_Year" Content="Год выпуска" HorizontalAlignment="Left" Margin="-2,72,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Type_eng" Content="Тип двигателя" HorizontalAlignment="Left" Margin="0,103,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Capacity" Content="Объем ДВС" HorizontalAlignment="Left" Margin="-5,160,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Drivegear" Content="Привод" HorizontalAlignment="Left" Margin="0,41,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Power" Content="Мощность" HorizontalAlignment="Left" Margin="0,129,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Name_C" Content="" HorizontalAlignment="Left" Margin="118,10,0,0" VerticalAlignment="Top" Width="135"/>
+        <Label x:Name="Drivegear_C" Content="" HorizontalAlignment="Left" Margin="118,41,0,0" VerticalAlignment="Top" Width="135"/>
+        <Label x:Name="Prod_Year_C" Content="" HorizontalAlignment="Left" Margin="118,72,0,0" VerticalAlignment="Top" Width="135"/>
+        <Label x:Name="Type_Eng_C" Content="" HorizontalAlignment="Left" Margin="118,103,0,0" VerticalAlignment="Top" Width="135"/>
+        <Label x:Name="Power_C" Content="" HorizontalAlignment="Left" Margin="118,129,0,0" VerticalAlignment="Top" Width="135"/>
+        <Label x:Name="Capacity_C" Content="" HorizontalAlignment="Left" Margin="118,160,0,0" VerticalAlignment="Top" Width="135"/>
+    </Grid>
+</Window>

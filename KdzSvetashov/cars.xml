@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<ListOfCars xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Cars>
+    <Car>
+      <Name>dsaafd</Name>
+      <ProductionYear>1324</ProductionYear>
+      <EngineType>1243</EngineType>
+      <EngineСapacity>4</EngineСapacity>
+      <Drivegear>234</Drivegear>
+      <Horsepower>234</Horsepower>
+    </Car>
+  </Cars>
+</ListOfCars>

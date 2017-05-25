@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Xml.Serialization;
 namespace KdzSvetashov
 {
-    class Car
+    [Serializable]
+    public class Car
     {
         private string _name;
         private int _productionYear;
@@ -92,16 +93,9 @@ namespace KdzSvetashov
             Drivegear = drGear;
             Horsepower = power;
         }
-        public void showCar(KdzSvetashov.MainWindow wnd)
+        public Car()
         {
-            wnd.info.Text += "Машина: " + Name + "\n";
-            wnd.info.Text += "Год выпуска: " + ProductionYear + "\n";
-            wnd.info.Text += "Тип двигателя: " + EngineType + "\n";
-            wnd.info.Text += "Объем двигателя: " + EngineСapacity + "\n";
-            wnd.info.Text += "Привод: " + Drivegear + "\n";
-            wnd.info.Text += "Мощность: " + Horsepower + "\n";
+
         }
-
-
     }
 }

@@ -5,8 +5,96 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KdzSvetashov"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        <TextBlock Name="info"></TextBlock>
-    </Grid>
+        Title="MainWindow" Height="600" Width="900">
+    <DockPanel Margin="0,0,3.6,0.4">
+        <Grid Name="admin" Visibility="Collapsed">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="129*"/>
+                <RowDefinition Height="116*"/>
+                <RowDefinition Height="117*"/>
+                <RowDefinition Height="112*"/>
+                <RowDefinition Height="97*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="239*"/>
+                <ColumnDefinition Width="394*"/>
+                <ColumnDefinition Width="261*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="AddCar_Button" Content="Добавить авто" HorizontalAlignment="Center" VerticalAlignment="Center" Width="150" Height="50" Click="AddCar_Button_Click" Margin="10,78,77.6,0.312"/>
+            <Button x:Name="Delete_Button" Content="Удалить" HorizontalAlignment="Center" VerticalAlignment="Center" Width="150" Height="50" RenderTransformOrigin="0.897,2.852" Margin="10,65.688,77.6,0.312" Grid.Row="1" Click="Delete_Button_Click"/>
+            <Button x:Name="Search_Button" Content="Поиск" HorizontalAlignment="Center" VerticalAlignment="Center" Width="150" Height="50" Margin="10,66.688,77.6,0.112" Grid.Row="2" Click="Search_Button_Click"/>
+            <ListBox x:Name="Search_result1" Height="345" Width="312" VerticalAlignment="Top" Grid.Column="2" Margin="338.4,117,-536,0" Grid.RowSpan="4" SelectionChanged="Search_result1_SelectionChanged">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Name}"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <Label x:Name="Search_Result" Content="Результаты поиска" Height="32" VerticalAlignment="Top" Width="125" Grid.Column="2" Margin="439.4,85,-450,0"/>
+
+            <TextBox x:Name="Car" TextWrapping="Wrap" Text="" Grid.Column="2" Margin="338.4,0,-537,71.312" Height="31" VerticalAlignment="Bottom"/>
+            <Button x:Name="More1" Content="Подробнее о результате поиска" HorizontalAlignment="Left" Margin="10,10.4,0,0" Grid.Row="4" VerticalAlignment="Top" Width="204" Height="50" Click="More1_Click" />
+            <ListBox x:Name="Table" Width="332.8" Height="560" VerticalAlignment="Center" Margin="0.4,10,-218.8,-0.125" Grid.RowSpan="5" SelectionChanged="Table_SelectionChanged_1" Grid.Column="2" >
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Name}"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <Label x:Name="label" Content="Название" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="2" Margin="454.4,-3,-450,0" Width="110" Height="29"/>
+            <Button x:Name="Truck" Content="Грузовики" HorizontalAlignment="Left" VerticalAlignment="Top" Width="109" Margin="10,82.4,0,0" Grid.Row="3" Click="Truck_Click"/>
+            <Button x:Name="Change" Content="Изменить" Height="50" VerticalAlignment="Top" Grid.Column="2" Margin="439.4,9.888,-491,0" Grid.Row="4" Click="Change_Click"/>
+        </Grid>
+        <Grid Name="front" Visibility="Collapsed">
+            <Button x:Name="Admin_Button" Content="Админ" HorizontalAlignment="Center" VerticalAlignment="Center" Width="150" Height="50" Margin="45,10.4,44.2,36.4" Grid.Row="4" Click="Admin_Button_Click"/>
+
+        </Grid>
+
+        <Grid Name="Admin_lorry" Visibility="Visible">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="129*"/>
+                <RowDefinition Height="116*"/>
+                <RowDefinition Height="117*"/>
+                <RowDefinition Height="112*"/>
+                <RowDefinition Height="97*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="239*"/>
+                <ColumnDefinition Width="394*"/>
+                <ColumnDefinition Width="261*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="AddLorry_Button" Content="Добавить грузовик" HorizontalAlignment="Center" VerticalAlignment="Center" Width="150" Height="50" Click="Add_Lorry_Button_Click" Margin="10,79,79.2,115.8" Grid.RowSpan="2" />
+            <Button x:Name="Delete_Button1" Content="Удалить" HorizontalAlignment="Center" VerticalAlignment="Center" Width="150" Height="50" RenderTransformOrigin="0.897,2.852" Margin="10,66.2,79.2,116.6" Grid.Row="1" Click="Delete_Button1_Click" Grid.RowSpan="2"/>
+            <Button x:Name="Search_Button1" Content="Поиск" HorizontalAlignment="Center" VerticalAlignment="Center" Width="150" Height="50" Margin="9,67.2,78.6,111.6" Grid.Row="2" Click="Search_Button1_Click" Grid.RowSpan="2"/>
+            <Button x:Name="Auto" Content="Машины" HorizontalAlignment="Left" VerticalAlignment="Top" Width="109" Margin="10,33.4,0,0" Grid.Row="3" Click="Auto_Click"/>
+            <TextBox x:Name="Lorry" TextWrapping="Wrap" Text="" Grid.Column="1" Margin="334.4,26,7.6,75.8" Grid.ColumnSpan="2"/>
+            <ListBox x:Name="Table1" Height="560" VerticalAlignment="Center" Width="332.8" Margin="232,10,64.6,0.4" Grid.RowSpan="5" SelectionChanged="Table1_SelectionChanged" Grid.ColumnSpan="2" >
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Name}"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <Label x:Name="Name" Content="Название" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="2"  Width="110" Margin="65.2,0,0,0"/>
+            <ListBox x:Name="Search_result" Grid.ColumnSpan="2" Grid.Column="1" HorizontalAlignment="Left" Height="345" Margin="332.4,0.2,0,0" VerticalAlignment="Top" Width="312" Grid.Row="1" Grid.RowSpan="4" SelectionChanged="Search_result_SelectionChanged">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Name}"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox >
+            <Label x:Name="Result" Content="Результаты поиска" Grid.Column="2" HorizontalAlignment="Left" Margin="46.4,93,0,0" VerticalAlignment="Top" Width="113"/>
+            <Button x:Name="More" Content="Подробнее о результате поиска" HorizontalAlignment="Left" Margin="10,10.4,0,0" Grid.Row="4" VerticalAlignment="Top" Width="204" Height="50" Click="More_Click"/>
+            <Button x:Name="Change1" Content="Изменить" Grid.Column="2" HorizontalAlignment="Left" Margin="65.4,10.4,0,0" Grid.Row="4" VerticalAlignment="Top" Width="146" Height="50" Click="Change1_Click"/>
+
+
+        </Grid>
+
+
+
+
+
+    </DockPanel>
 </Window>

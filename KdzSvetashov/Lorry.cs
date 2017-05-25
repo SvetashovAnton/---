@@ -3,16 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace KdzSvetashov
 {
-    class Lorry
+    [Serializable]
+    public class Lorry
     {
         private string _name;
         private int _productionYear;
         private string _engineType;
         private int _engineСapacity;
-        private string _freightMass;
+        private int _freightMass;
         private int _horsepower;
 
         public string Name
@@ -59,7 +61,7 @@ namespace KdzSvetashov
                 _engineСapacity = value;
             }
         }
-        public string FreightMass
+        public int FreightMass
         {
             get
             {
@@ -82,7 +84,7 @@ namespace KdzSvetashov
             }
         }
 
-        public Lorry(string lName, int year, string enType, int enCapacity, string frMass, int power)
+        public Lorry(string lName, int year, string enType, int enCapacity, int frMass, int power)
         {
             Name = lName;
             ProductionYear = year;
@@ -90,6 +92,10 @@ namespace KdzSvetashov
             EngineСapacity = enCapacity;
             FreightMass = frMass;
             Horsepower = power;
+        }
+        public Lorry()
+        {
+
         }
 
 
